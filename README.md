@@ -1,6 +1,6 @@
 # GoDaddy hook for `dehydrated`
 
-This is a `bash`-only hook for the [Let's Encrypt](https://letsencrypt.org/) ACME client [dehydrated](https://github.com/dehydrated-io/dehydrated), using [GoDaddy](https://www.GoDaddy.com/)'s [APIs](https://developer.godaddy.com/) to automatically manage DNS records to respond to `dns-01` challenges.
+This is a **`bash`-only** hook for the [Let's Encrypt](https://letsencrypt.org/) ACME client [dehydrated](https://github.com/dehydrated-io/dehydrated), using [GoDaddy](https://www.GoDaddy.com/)'s [APIs](https://developer.godaddy.com/) to automatically manage DNS records to respond to `dns-01` challenges.
 
 ## Requirements
 
@@ -36,6 +36,11 @@ You may also put those lines into a `dehydrated` `config` file.
 ```bash
 dehydrated/dehydrated --cron -d foo.example.com -t dns-01 -k 'hooks/dns-01-godaddy/hook.sh'
 ```
+# Alternatives
+
+Although I prefer a `bash`-only version, there are other GoDaddy-compatible, `dehydrated` hooks:
+
+* https://github.com/josteink/le-godaddy-dns - requires python and some python libraries
 
 # Acknowledgements
 
