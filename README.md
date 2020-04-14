@@ -42,6 +42,14 @@ Although I prefer a `bash`-only version, there are other GoDaddy-compatible, `de
 
 * https://github.com/josteink/le-godaddy-dns - requires python and some python libraries
 
+# Status: abandoned
+
+I've mostly abandoned this hook.  Instead, I'm using [`lexicon`](https://pypi.org/project/dns-lexicon/), even though it adds a dependency on Python.
+
+Issues that I never resolved:
+ - GoDaddy doesn't offer a API call to delete a record - only [`GET` and `PUT`](https://developer.godaddy.com/doc/endpoint/domains#/v1/recordGet).  I did find [a possible solution idea in the GoDaddy forums](https://www.godaddy.com/community/Managing-Domains/Deleting-a-single-DNS-record-through-the-API/td-p/108003), but never implemented.
+ - Deployment is baked into the hook (currently a NoOp).  Would like to pull out somehow.
+
 # Acknowledgements
 
 With thanks to:
